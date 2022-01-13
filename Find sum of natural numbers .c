@@ -1,10 +1,16 @@
+// sum of n natural numbers
 #include<stdio.h>
+//#include<conio.h>
 int main()
 {
-    int n,sum;
-    scanf("%d",&n);
-    sum=n*(n+1)/2;
-    printf("%d
+	int n,sum;
+	//printf("Enter n value =
+");
+	scanf("%d",&n);
+	sum=n*(n+1)/2;
+	printf("%d
 ",sum);
-    return 0;
+//	getch();
+	return 0;
+		
 }
