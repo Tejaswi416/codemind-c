@@ -1,18 +1,17 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int a,j,s=0,k;
-    scanf("%d",&a);
-    k=pow(a,2);
-    // t=k;
-    while(k!=0)
+    int n,r,sum=0,sq,temp;
+    scanf("%d",&n);
+    sq=n*n;
+    temp=n;
+    while(sq!=0)
     {
-        j=k%10;
-        s+=j;
-        k/=10;
+        r=sq%10;
+        sum=sum+r;
+        sq=sq/10;
     }
-    if(a==s)
+    if(temp==sum)
     printf("Neon Number");
     else
     printf("Not Neon Number");
