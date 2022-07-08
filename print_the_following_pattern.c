@@ -1,15 +1,23 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int i,j,n;
+    int i,j,k,n;
+    int z=1;
     scanf("%d",&n);
-    for(i=n;i>=1;i--)
+    for(i=1;i<=n;i++)
     {
-        for(j=1;j<=i;j++)
+        for(k=n-1;k>=i;k--)
         {
-            printf("%c ",i+64);
+            printf(" ");
         }
+        for(j=1;j<=z;j++)
+        {
+            printf("%d",abs(j-i));
+        }
+        z+=2;
         printf("
 ");
     }
+    return 0;
 }
