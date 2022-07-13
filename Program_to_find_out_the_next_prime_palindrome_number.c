@@ -1,49 +1,33 @@
-int pal(int n)
-{
-    int s=0,temp,d;
-    temp=n;
-    while(n!=0)
-    {
-        d=n%10;
-        s=s*10+d;
-        n=n/10;
-    }
-    if(s==temp)
-    return 1;
-    else
-    return 0;
-}
-int prime(int n)
-{
-    int i,c=0;
-    for(i=1;i<=n;i++)
-    {
-        if(n%i==0)
-        {
-            c=c+1;
-        }
-    }
-    if(c==2)
-    return 1;
-    else
-    return 0;
-}
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
 int main()
 {
-    int n,a,k;
-    scanf("%d",&n);
-    a=n+1;
+    int a, j, k = 0, n, t, count = 0;
+    scanf("%d", &a);
+    a += 1;
     while(1)
-    {
-        if(prime(a) && pal(a))
+    {k=0;
+        a++;
+        t=a;
+        while (t != 0)
         {
-            k=a;
-            break;
+            j = t % 10;
+            k = j + k * 10;
+            t /= 10;
         }
-        a=a+1;
+        if (a == k)
+        {
+            count = 0;
+            for (n = 1; n <= a; n++)
+            {
+                if (a % n == 0)
+                    count++;
+            }
+            if (count == 2)
+            {
+                printf("%d", a);
+                return 0;
+            }
+        }
     }
-    printf("%d",k);
-    
+    return 0;
 }
