@@ -9,6 +9,7 @@ int main()
         scanf("%d%d",&m,&n);
         printf("%d
 ",m+n);
+        
     }
     return 0;
 }
