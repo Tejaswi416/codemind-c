@@ -1,5 +1,5 @@
 #include<stdio.h>
-int prime(int n)
+int is_prime(int n)
 {
     int i=1,count=0;
     while(i<=n)
@@ -16,18 +16,18 @@ int prime(int n)
     }
     else
     {
-        return 0;       
+        return 0;            
     }
 }
 int main()
 {
-    int n,count=0;
-    scanf("%d",&n);
-    for(int i=1;i<=n;i++)
+    int n,i,count=0;
+    scanf("%d", &n);
+    for(i=1;i<=n;i++)
     {
-        if(prime(i)==0)
+        if(n%i==0)
         {
-            if(n%i==0)
+            if(is_prime(i)==0)
             {
                 count++;
             }
