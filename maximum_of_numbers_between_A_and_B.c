@@ -28,6 +28,6 @@ int main()
     if(k==0)
     printf("-1");
     else
-    printf("%d", d);
+    printf("%d",d);
     return 0;
-}
+}    
